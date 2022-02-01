@@ -11,6 +11,7 @@
 
 def max_profit(prices):
     left,right = 0, 1
+    
     max_profit = 0
 
     while right < len(prices):
