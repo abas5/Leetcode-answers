@@ -1,30 +1,35 @@
-def spiralTraverse(array):
-    # Write your code here.
-    result = []
-	startRow, endRow = 0, len(array) - 1
-	startCol, endCol = 0, len(array[0]) - 1
+
+
+
+array = [[1, 2, 3, 4],
+		 [5, 6, 7, 8],
+		 [9, 10, 11, 12],
+		 [13 ,14, 15, 16]
+		  ]
+			
+
+start_row, end_row = 0, len(array) - 1
+start_col, end_col = 0, len(array[0]) - 1
+
+
+for i in range(0, 5):
+	print("Hello")
+
+while start_row <= end_row and start_col <= end_col:
+	for col in range(start_col, end_col + 1):
+		print(array[start_row][col])
 	
-	while startRow <= endRow and startCol <= endCol:
-		for col in range(startCol, endCol + 1):
-			result.append(array[startRow][col])
-		
-		for row in range(startRow + 1, endRow + 1):
-			result.append(array[row][endCol])
-		
-		for col in reversed(range(startCol, endCol)):
-			if startRow == endRow:
-				break
-			result.append(array[endRow][col])
-		
-		for row in reversed(range(startRow + 1, endRow)):
-			if startCol == endCol:
-				break
-			result.append(array[row][startCol])
-			
-		startRow += 1
-		endRow -= 1
-		startCol += 1
-		endCol -= 1
-		
-	return result
-			
+	for row in range(start_row + 1, end_row + 1):
+		print(array[row][end_col])
+	
+	for col in reversed(range(start_col, end_col)):
+		print(array[end_row][col])
+	
+	for row in reversed(range(start_row + 1, end_row)):
+		print(array[row][start_col])
+	
+	
+	start_col += 1
+	end_col -= 1
+	start_row += 1
+	end_row -= 1
