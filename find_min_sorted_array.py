@@ -26,7 +26,7 @@ ans = find_min(nums)
 
 print(ans)
 
-nums = [3, 4, 5, 1, 2, 2.1, 2.2, 2.3, 2.4]
+nums = [3, 4, 6, 7, 9]
 
 ans = find_min(nums)
 
